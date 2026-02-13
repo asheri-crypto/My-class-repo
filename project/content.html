@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AquaOrbit – NaturaFlow System</title>
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: #f4f8f3;
+            color: #1d3a26;
+        }
+
+        /* HEADER WITH VIDEO BACKGROUND */
+        header {
+            position: relative;
+            height: 60vh;
+            overflow: hidden;
+        }
+
+        header video {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 40, 0, 0.45);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding-top: 15vh;
+            color: white;
+        }
+
+        .header-content h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+        }
+
+        .header-content p {
+            font-size: 1.25rem;
+            margin-top: 10px;
+        }
+
+        /* HOME BUTTON */
+        .home-btn {
+            position: absolute;
+            right: 25px;
+            top: 20px;
+            z-index: 3;
+            padding: 10px 24px;
+            background: rgba(255, 255, 255, 0.85);
+            color: #1d3a26;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .home-btn:hover {
+            background: white;
+            transform: scale(1.07);
+        }
+
+        /* MAIN CONTENT */
+        .content {
+            padding: 50px 12%;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .content h2 {
+            color: #245c34;
+            font-size: 2rem;
+            margin-top: 45px;
+        }
+
+        .content ul {
+            padding-left: 20px;
+        }
+
+        .highlight {
+            background: #e8f5e4;
+            padding: 20px;
+            border-left: 5px solid #2e7d4b;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER WITH VIDEO -->
+    <header>
+        <a href="index.html" class="home-btn">Home</a>
+
+        <video autoplay muted loop>
+            <source src="videos/filter.mp4" type="video/mp4">
+        </video>
+
+        <div class="header-content">
+            <h1>AquaOrbit: The NaturaFlow System</h1>
+            <p>Sustainable farming powered by rain, wind, sensors & natural cycles</p>
+        </div>
+    </header>
+
+    <!-- PROJECT CONTENT -->
+    <div class="content">
+        
+        <h2>🌱 1. Project Overview</h2>
+        <p>
+            AQUAORBIT: NATURAFLOW SYSTEM is an intelligent nature-powered farming solution that transforms rainwater 
+            into direct irrigation for crops. It uses a circular rain-collection device, wind-assisted energy, and 
+            soil sensors to deliver the right amount of water at the right time — without electricity or waste.
+        </p>
+        <p>
+            This system helps farmers collect, store, analyze, and distribute rainwater automatically using simple 
+            IoT and natural energy sources.
+        </p>
+
+        <h2>⭐ 2. Problem Statement</h2>
+        <p>
+            Many farmers in Rwanda struggle with inconsistent rainfall, water wastage, and inefficient irrigation. 
+            Rainwater often flows away unused, and farmers lack real-time information on soil dryness, weather, and 
+            crop needs. This leads to:
+        </p>
+        <ul>
+            <li>Poor crop yields</li>
+            <li>Water shortage during dry periods</li>
+            <li>High dependence on manual labor</li>
+            <li>Inability to predict irrigation needs</li>
+        </ul>
+
+        <h2>⭐ 3. Purpose of the Project</h2>
+        <p>
+            The purpose of AQUAORBIT is to create a natural water cycle on the farm, where rain is harvested, analyzed, 
+            and reused to support crops’ growth with minimal effort from the farmer.
+        </p>
+
+        <h2>⭐ 4. Project Objectives</h2>
+        <ul>
+            <li><b>Capture rain intelligently</b> using the circular rain collector</li>
+            <li><b>Read nature’s signals</b> using soil & climate sensors</li>
+            <li><b>Deliver water automatically</b> through smart irrigation paths</li>
+            <li><b>Use wind as natural power</b> to keep everything off-grid</li>
+            <li><b>Assist farmers with a simple mobile app</b> for monitoring</li>
+            <li><b>Reduce water waste</b> using natural gravity-driven flow</li>
+        </ul>
+
+        <h2>⭐ 5. Target Users</h2>
+        <ul>
+            <li>Small-scale farmers</li>
+            <li>Rural communities & cooperatives</li>
+            <li>Students learning sustainable tech</li>
+            <li>Gardeners & urban growers</li>
+        </ul>
+
+        <h2>⭐ 6. Core Components of the System</h2>
+        <p><b>🌧️ Circular Rain Collector:</b> captures & filters rain, measures volume, directs water.</p>
+        <p><b>🍃 Wind Assist Module:</b> mini turbine generating low-level power for sensors.</p>
+        <p><b>🌱 Field Sensors:</b> measure soil moisture, temperature, sunlight, humidity.</p>
+        <p><b>💧 Smart Irrigation Paths:</b> gravity-powered water delivery to crops.</p>
+        <p><b>📱 Naturaflow Mobile App:</b> shows plant health, soil data, rainfall, wind power & alerts.</p>
+
+        <h2>⭐ Description of the Water Flow System </h2>
+        <div class="highlight">
+            <p>
+                When rainfall begins, the circular Smart Rain Collector captures the falling water and filters out 
+                debris using a built-in mesh layer. From the top disk, water flows downward into the central funnel, 
+                where its volume is measured by a simple float sensor. Gravity then guides the water into underground 
+                channels that spread across the farmland.  
+                As the water moves, soil moisture sensors monitor absorption levels and send the data to the mobile app.  
+                If the soil becomes fully hydrated, the pathway automatically re-routes excess water into a small 
+                storage pit for later use.  
+                This creates a continuous natural cycle — **from rain → collector → funnel → smart paths → crop roots** —
+                without needing pumps or electricity.
+            </p>
+        </div>
+
+        <h2>⭐ 7. Expected Impact for the farmers</h2>
+        <ul>
+            <li>Boosts crop yield</li>
+            <li>Reduces water waste</li>
+            <li>Predicts irrigation needs</li>
+            <li>Fully off-grid operation</li>
+            <li>Climate-resilient agriculture</li>
+        </ul>
+
+        <h2>⭐ 8. Benefits for Us (the Developers)</h2>
+        <ul>
+            <li>We gain experience creating a real smart-agriculture innovation.</li>
+            <li>We build IoT, sustainability engineering & UI/UX skills.</li>
+            <li>We create a project worthy of competitions, hackathons & showcases.</li>
+            <li>We develop a solution that can scale across Africa.</li>
+            <li>We contribute to a system that genuinely helps farmers and communities.</li>
+        </ul>
+
+    </div>
+</body>
+</html>

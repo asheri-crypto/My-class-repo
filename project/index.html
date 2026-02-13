@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AquaOrbit Hackathon</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      color: white;
+      overflow: hidden;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    .bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 2;
+    }
+
+    .content {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      top: 30%;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: lighter;
+      margin-top: 0;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 15px 35px;
+      font-size: 1.2rem;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="videos/drone.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="content">
+      <h1>AQUAORBIT</h1>
+      <h2>NATURAFLOW SYSTEM</h2>
+      <p>Harvest Rain. Read Nature. Feed Crops.</p>
+
+      <button class="btn" onclick="location.href='content.html'">Enter Project</button>
+    </div>
+  </div>
+
+</body>
+</html>

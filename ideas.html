@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class Meeting – Ideas & Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+      color: #b00083;
+      font-size: 1.1em;
+      background: linear-gradient(135deg, #ffe4ec, #ffd1e8, #fff0f6);
+      background-size: 300% 300%;
+      animation: gradientMove 8s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    header {
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(45deg, #ff4fad, #ff69b4, #fc89c3);
+      padding: 2.7em 0;
+      border-radius: 0 0 40px 40px;
+      box-shadow: 0 6px 40px rgba(255, 105, 180, 0.45);
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.9em;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      font-weight: 500;
+      margin-top: .6em;
+      color: #ffe7f3;
+    }
+
+    nav {
+      background: rgba(255, 182, 193, 0.8);
+      text-align: center;
+      padding: 1em;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px #ffb9d9;
+      margin: 2em auto;
+      max-width: 950px;
+      backdrop-filter: blur(5px);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #b00083;
+      background: #ffcbe2;
+      padding: 0.7em 1.6em;
+      border-radius: 12px;
+      margin: 0.6em;
+      font-weight: bold;
+      font-size: 1em;
+      display: inline-block;
+      box-shadow: 0 2px 8px rgba(252, 90, 160, 0.3);
+      transition: all 0.25s ease;
+    }
+
+    nav a:hover, nav a.current {
+      background: #ff69b4;
+      color: #fff;
+      box-shadow: 0 3px 18px #ffa8d4;
+      transform: translateY(-2px) scale(1.05);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 3em auto;
+      background: #fff0f8;
+      border-radius: 30px;
+      box-shadow: 0 6px 25px rgba(255, 140, 180, 0.3);
+      padding: 2em 2.2em 2.8em;
+      position: relative;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2em 0;
+      background: #ffe6f0;
+      box-shadow: 0 3px 20px rgba(255, 193, 230, 0.5);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    caption {
+      font-size: 1.4em;
+      font-weight: 700;
+      color: #d22d8f;
+      margin-bottom: 1em;
+      letter-spacing: 0.5px;
+    }
+
+    th, td {
+      padding: 1em;
+      vertical-align: top;
+      border: 2px solid #ff8fc6;
+    }
+
+    th {
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(90deg, #ff67b2, #ff8fc6);
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-size: 1.1em;
+    }
+
+    tr:nth-child(even) td {
+      background: #fff8fc;
+    }
+
+    input[type="text"], textarea {
+      width: 97%;
+      border: 2px solid #ff95bf;
+      border-radius: 10px;
+      padding: 0.7em;
+      background: #fff;
+      color: #ad007e;
+      font-size: 1em;
+      outline: none;
+      box-shadow: 0 0 0 transparent;
+      transition: all 0.25s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #ff47a2;
+      box-shadow: 0 0 8px #ffc6e0;
+    }
+
+    textarea {
+      min-height: 70px;
+      resize: vertical;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 2em;
+    }
+
+    button {
+      background: linear-gradient(45deg, #ff6ab4, #ff85c1);
+      border: none;
+      color: #fff;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      padding: 0.9em 1.6em;
+      border-radius: 14px;
+      font-size: 1em;
+      cursor: pointer;
+      margin: 0.6em;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+    }
+
+    button:hover {
+      background: linear-gradient(45deg, #ff4298, #ff69b4);
+      box-shadow: 0 6px 18px rgba(255, 140, 200, 0.5);
+      transform: scale(1.05);
+    }
+
+    p.special {
+      color: #ff007f;
+      text-align: center;
+      margin-top: 2.2em;
+      font-weight: bold;
+      font-size: 1.1em;
+      background: #ffe3ef;
+      padding: 0.8em;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(255, 193, 230, 0.45);
+    }
+
+    footer {
+      text-align: center;
+      background: linear-gradient(90deg, #ff66a1, #ff8ecf);
+      color: #fff;
+      font-weight: bold;
+      letter-spacing: 1px;
+      padding: 1.3em 0;
+      border-radius: 0 0 25px 25px;
+      box-shadow: 0 -5px 22px rgba(255, 168, 208, 0.3);
+      margin-top: 3em;
+    }
+
+    @media (max-width: 700px) {
+      nav a { display: block; width: 80%; margin: 0.6em auto; }
+      table, th, td, input, textarea { font-size: 0.93em; }
+      header h1 { font-size: 2em; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌸 Class Meeting: Ideas & Solutions 🌸</h1>
+    <p>By Class Captain — Together We Build Success</p>
+  </header>
+
+  <nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="com.html">🧑‍🤝‍🧑 Committee</a>
+    <a href="ideas.html" class="current">💡 Ideas & Solutions</a>
+    <a href="results.html">📊 Results</a>
+  </nav>
+
+  <main>
+    <form id="idea-form">
+      <table>
+        <caption>Enter 40 Student Ideas and Solutions</caption>
+        <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>Idea / Problem Shared</th>
+            <th>Proposed Solution</th>
+          </tr>
+        </thead>
+        <tbody id="ideas-body"></tbody>
+      </table>
+
+      <div class="buttons">
+        <button type="button" onclick="addRow()">➕ Add Row</button>
+        <button type="button" onclick="saveAll()">💾 Save All</button>
+        <button type="button" onclick="loadAll()">📂 Load All</button>
+        <button type="button" onclick="clearAll()">🗑️ Clear All</button>
+      </div>
+    </form>
+    <p class="special">
+      💬 Every idea counts — let’s unite through creativity and purpose!
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2025 Our Class Website | Created with ❤️ by ASHERI LUCKY DAVID
+  </footer>
+
+  <script>
+    // AUTO GENERATE 40 ROWS
+    window.onload = () => {
+      const tbody = document.getElementById("ideas-body");
+      for (let i = 1; i <= 40; i++) {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td><input type="text" placeholder="Student ${i}"></td>
+          <td><textarea placeholder="Idea or Problem"></textarea></td>
+          <td><textarea placeholder="Solution"></textarea></td>`;
+        tbody.appendChild(row);
+      }
+    };
+
+    // SAVE DATA LOCALLY
+    function saveAll() {
+      const rows = document.querySelectorAll("#ideas-body tr");
+      const data = [];
+      rows.forEach(row => {
+        const name = row.querySelector("input").value;
+        const idea = row.querySelectorAll("textarea")[0].value;
+        const solution = row.querySelectorAll("textarea")[1].value;
+        data.push({name, idea, solution});
+      });
+      localStorage.setItem("class_ideas_data", JSON.stringify(data));
+      alert("✅ Entries Saved Successfully!");
+    }
+
+    // LOAD DATA
+    function loadAll() {
+      const data = JSON.parse(localStorage.getItem("class_ideas_data") || "[]");
+      const rows = document.querySelectorAll("#ideas-body tr");
+      data.forEach((item, i) => {
+        if (rows[i]) {
+          rows[i].querySelector("input").value = item.name;
+          rows[i].querySelectorAll("textarea")[0].value = item.idea;
+          rows[i].querySelectorAll("textarea")[1].value = item.solution;
+        }
+      });
+      alert("📥 Loaded Saved Entries!");
+    }
+
+    // CLEAR EVERYTHING
+    function clearAll() {
+      localStorage.removeItem("class_ideas_data");
+      document.querySelectorAll("input, textarea").forEach(el => el.value = "");
+      alert("🧹 Cleared All Entries!");
+    }
+
+    function addRow() {
+      const tbody = document.getElementById("ideas-body");
+      const count = tbody.children.length + 1;
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td><input type="text" placeholder="Student ${count}"></td>
+        <td><textarea placeholder="Idea or Problem"></textarea></td>
+        <td><textarea placeholder="Solution"></textarea></td>`;
+      tbody.appendChild(row);
+    }
+  </script>
+</body>
+</html>
